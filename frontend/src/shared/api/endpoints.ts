@@ -24,5 +24,12 @@ export default class Endpoints {
   static readonly read: string = "/api/shelf/books/read";
   static readonly reading: string = "/api/shelf/books/reading";
   static readonly toRead: string = "/api/shelf/books/to-read";
+  static readonly mostLikedBook: string = "/api/stats/books/most-liked";
+  static readonly leastLikedBook: string = "/api/stats/books/least-liked";
+  static readonly avgRatingOfReadBooks: string = "/api/stats/books/avg-rating";
+  static readonly longestReadBook: string = "/api/stats/books/longest-read";
+  static readonly avgLengthOfReadBooks: string = "/api/stats/books/avg-length";
+  static readonly mostReadGenre: string = "/api/stats/genre/most-read";
+  static readonly mostLikedGenre: string = "/api/stats/genre/most-liked";
 }
 

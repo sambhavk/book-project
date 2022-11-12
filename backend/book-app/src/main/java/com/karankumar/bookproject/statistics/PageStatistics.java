@@ -55,6 +55,15 @@ public class PageStatistics extends Statistics {
     return booksWithNonEmptyPageCount;
   }
 
+  public Optional<Book> findLongestReadBook(){
+    Book longestReadBook = null;
+    if(!booksWithPageCount.isEmpty()){
+      booksWithPageCount.sort(Comparator.comparing(Book::getPagesRead));
+      longestReadBook = booksWithPageCount.get(booksWithPageCount.size() - 1);
+    }
+    return Optional.ofNullable(longestReadBook);
+  }
+
   /**
    * @return the average page length for all books in the 'read' shelf This average only includes
    *     books that have a page length specified
